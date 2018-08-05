@@ -1,0 +1,67 @@
+{
+  "name": "@namefy/jake",
+  "version": "0.0.0",
+  "description": "simple task runner",
+  "bin": "./bin/jake",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "author": {
+    "name": "naxmefy",
+    "email": "naxmefy@icloud.com",
+    "url": "https://naxmefy.github.io"
+  },
+  "keywords": [
+    "task",
+    "runner",
+    "scanner",
+    "jake"
+  ],
+  "homepage": "https://naxmefy.github.io/jake",
+  "bugs": {
+    "url": "https://github.com/naxmefy/jake/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naxmefy/jake.git"
+  },
+  "engines": {
+    "node": ">=4.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint src test",
+    "lint:fix": "npm run tslint -- --fix",
+    "prepublish": "npm run build",
+    "test": "mocha",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^7.0.27",
+    "mocha": "^3.3.0",
+    "nyc": "^10.3.2",
+    "ts-node": "^3.0.4",
+    "tslint": "^5.2.0",
+    "tslint-config-standard": "^5.0.2",
+    "typescript": "^2.3.2"
+  },
+  "dependencies": {
+    "rc": "^1.2.8"
+  }
+}
