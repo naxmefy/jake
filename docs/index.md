@@ -3,6 +3,7 @@
 * [install](install)
 * [usage](usage)
 * [config](config)
+* [faq](#faq)
 
 **simple example**
 
@@ -40,6 +41,10 @@ jake.namespace('my', () => {
 ```
 
 ## FAQ
+
+* [Why another **jake**?](#why-another-jake)
+* [How **jake** find the tasks?](#how-jake-find-the-tasks)
+* [Are there configurations for the behavior of **jake**?](#are-there-configurations-for-the-behavior-of-jake)
 
 ### Why another **jake**?
 
