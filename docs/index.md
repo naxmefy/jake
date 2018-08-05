@@ -7,6 +7,12 @@
 **simple example**
 
 ```bash
+// install global
+$ npm i -g @naxmefy/jake
+
+// install local
+npm i @naxmefy/jake
+
 // list tasks
 $ jake -T
 
@@ -32,3 +38,22 @@ jake.namespace('my', () => {
   })
 })
 ```
+
+## FAQ
+
+### Why another **jake**?
+
+cuz the others does not satisfy me :P
+
+### How **jake** find the tasks?
+
+**jake** automatically scans installed modules and is looking for tasks.
+Tasks can be applied through several ways (conventions):
+
+1. a folder named `jake` - files inside will be loaded
+2. files named `*.jake.js`
+3. config property named `jake` inside `package.json`
+
+### Are there configurations for the behavior of **jake**?
+
+Yes. **jake** can be configured through `rc`-files and package.json
